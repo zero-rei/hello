@@ -306,6 +306,116 @@ body.is-fixed #contents {
 	background: url(../images/bg_takeout.jpg) no-repeat center center / cover;
 }
 
+/*追加した*/
+
+.menu > li {
+    float: left;
+    width: 25%; /* グローバルナビ4つの場合 */
+    height: 80px;
+    line-height: 30px;
+    background: #fff;
+}
+
+.menu > li a {
+    display: block;text-decoration: none;
+	padding: 10px;	/*メニュー内の余白*/
+	background: #fff;	/*背景色*/
+	font-size: 20px;		/*文字サイズ*/
+	color: #000;	/*文字色*/
+	text-align: center;
+}
+
+/*マウスオン時と、現在表示中(current)用の共通設定*/
+.menu li.current a {
+	background: #eee;	/*背景色*/
+}
+
+.menu > li a:hover {
+    background: #eee;
+    color: #000;
+}
+
+ul.menu__second-level {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+
+ul.menu__third-level {
+    visibility: hidden;
+    opacity: 0;
+}
+
+ul.menu__fourth-level {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu > li:hover {
+    background: #fff;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.menu__second-level li {
+    border-top: 1px solid #111;
+}
+
+.menu__third-level li {
+    border-top: 1px solid #111;
+}
+
+.menu__second-level li a:hover {
+    background: #eee;
+}
+
+.menu__third-level li a:hover {
+    background: #eee;
+}
+
+.menu__fourth-level li a:hover {
+    background: #eee;
+}
+ 
+.menu > li a span {
+	display: block;
+	font-size: 12px;	/*文字サイズ*/
+}
+
+
+/* floatクリア */
+.menu:before,
+.menu:after {
+    content: " ";
+    display: table;
+}
+
+.menu:after {
+    clear: both;
+}
+
+.menu {
+    *zoom: 1;
+}
+.menu > li.menu__single {
+    position: relative;
+}
+
+li.menu__single ul.menu__second-level {
+    position: flex;
+    top: 20px;
+    width: 100%;
+    background: #eee;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+li.menu__single:hover ul.menu__second-level {
+    top: 80px;
+    visibility: visible;
+    opacity: 1;
+}
+
 /*footer（copyrightなどが入った最下部ブロック）
 ---------------------------------------------------------------------------*/
 footer {}

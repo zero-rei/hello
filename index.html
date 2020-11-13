@@ -50,10 +50,18 @@ return false;
 </header>
 
 <!--PC用（801px以上端末）メニュー-->
-<nav id="menubar" class="nav-fix-pos">
-<ul>
+<nav>
+<ul class="menu">
 <li class="current"><a href="index.html">Home<span>ホーム</span></a></li>
-<li><a href="menu.html">Menu<span>メニュー</span></a></li>
+<li class="menu__single"><a href="menu.html" class="init-bottom">Menu<span>メニュー</span></a>
+    <ul class="menu__second-level">
+            <li><a href="#">肉類</a></li>
+            <li><a href="#">魚類</a></li>
+            <li><a href="#">米類</a></li>
+            <li><a href="#">麺類</a></li>
+            <li><a href="#">パン・スイーツ類</a></li>
+    </ul>
+</li>
 <li><a href="access.html">Recommended<span>おすすめ</span></a></li>
 <li><a href="contact.html">Contact<span>お問合せ</span></a></li>
 </ul>
