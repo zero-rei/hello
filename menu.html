@@ -46,13 +46,13 @@ return false;
 </header>
 
 <!--PC用（801px以上端末）メニュー-->
-<nav id="menubar" class="nav-fix-pos">
-<ul>
-<li><a href="index.html">Home<span>ホーム</span></a></li>
-<li class="current"><a href="menu.html">Menu<span>メニュー</span></a></li>
-<li><a href="access.html">Recommended<span>おすすめ</span></a></li>
-<li><a href="contact.html">Contact<span>お問合せ</span></a></li>
-</ul>
+<nav>
+<ul id="menubar" class="nav-fix-pos">
+    <li><a href="index.html">Home<span>ホーム</span></a></li>
+    <li><a href="menu.html">Menu<span>メニュー</span></a></li>
+    <li><a href="access.html">Recommended<span>おすすめ</span></a></li>
+    <li><a href="contact.html">Contact<span>お問合せ</span></a></li>
+    </ul>
 </nav>
 
 <!--小さな端末用（900px以下端末）メニュー-->
@@ -69,11 +69,44 @@ return false;
 
 <section>
 
-<h2>お電話でのお問い合わせ</h2>
-<p class="c">お電話にてご予約・お問い合わせを承っております。<br>
-<span class="big1">03-0000-0000</span><br>
-</p>
 
+<h2>メニュー</h2>
+    <div id="item-list">
+    <ul>
+        <li class="menu lunch">
+        <a href="takeout.html">
+        <p>RICE<span>米類</span></p>
+        </a>
+        </li>
+
+
+        <li class="menu course">
+        <a href="takeout.html">
+        <p>FISH<span>お魚</span></p>
+        </a>
+        </li>
+
+
+        <!--追加-->
+        <li class="menu meat">
+        <a href="takeout.html">
+        <p>MEAT<span>お肉　</span></p>
+        </a>
+        </li>
+
+        <li class="menu noodles">
+        <a href="takeout.html">
+        <p>NOODLES<span>麺類　</span></p>
+        </a>
+        </li>
+
+        <li class="menu takeout">
+        <a href="takeout.html">
+        <p>BREAD<span>パン・スイーツ類　</span></p>
+        </a>
+        </li>
+    </ul>
+    </div>
 </section>
 
 </div>

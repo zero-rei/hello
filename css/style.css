@@ -121,24 +121,25 @@ ul.icon img {
 ---------------------------------------------------------------------------*/
 /*メニューブロック*/
 #menubar {
-	overflow: hidden;position: relative;z-index: 1;	
+	position: relative;z-index: 1;	
 	background: #fff;	/*古いブラウザ用*/
 	background: rgba(255,255,255,0.95);	/*背景色。255,255,255は白の事で、0.95は色が95%出た状態の事。*/
 }
 /*メニュー１個あたりの設定*/
-#menubar ul li {
-	float: left;/*左に回り込み*/
-    width: 25%;            /*幅。今回は4個メニューがあるので100÷4=25*/
-    
-	font-size: 20px;	/*文字サイズ*/
-	text-align: center;	/*文字をセンタリング*/
+#menubar >  li {
+	float: left;
+    width: 25%; /* グローバルナビ4つの場合 */
+    height: 80px;
+    line-height: 30px;
+    background: #fff;
 }
-#menubar ul li a {
-	text-decoration: none;display: block;
-	border-left: 1px solid #ccc;	/*左の線の幅、線種、色*/
-	height: 80px;		/*メニューの高さ。※ここを変更する場合は、上にあるfixmenu設定も変更が必要です。*/
-	padding-top: 5px;	/*上に空ける余白。メニューテキストの上下のバランスをとります。※ここを変更する場合は、上にあるfixmenu設定も変更が必要です。*/
-	color: #333;	/*文字色*/
+#menubar >  li a {
+	display: block;text-decoration: none;
+	padding: 10px;	/*メニュー内の余白*/
+	background: #fff;	/*背景色*/
+	font-size: 20px;		/*文字サイズ*/
+	color: #000;	/*文字色*/
+	text-align: center;
 }
 /*１つ目のメニューへの追加指定*/
 #menubar li:first-child a {
@@ -147,13 +148,88 @@ ul.icon img {
 /*飾り文字。小文字表記部分。*/
 #menubar li a span {
 	display: block;
-	font-size: 60%;	/*文字サイズ*/
+	font-size: 12px;	/*文字サイズ*/
 	color: #999;	/*文字色*/
 }
 /*マウスオン時と、現在表示中(current)用の共通設定*/
-#menubar li a:hover, #menubar li.current a {
-	background: #eee;	/*背景色*/
+#menubar > li a:hover, #menubar li.current a {
+	background: #eee;
+    color: #000;
 }
+#menubar > li:hover {
+    background: #fff;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+#menubar ul.menu__second-level {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+
+#menubar ul.menu__third-level {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#menubar ul.menu__fourth-level {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#menubar .menu__second-level li {
+    border-top: 1px solid #000;
+}
+
+#menubar .menu__third-level li {
+    border-top: 1px solid #000;
+}
+
+#menubar .menu__second-level li a:hover {
+    background: #eee;
+}
+
+#menubar .menu__third-level li a:hover {
+    background: #eee;
+}
+
+#menubar .menu__fourth-level li a:hover {
+    background: #eee;
+}
+#menubar:before,
+#menubar:after {
+    content: " ";
+    display:table;
+}
+
+#menubar:after {
+    clear: both;
+}
+
+#menubar {
+    *zoom: 1;
+}
+
+#menubar > li.menu__single {
+    position: relative;
+}
+
+#menubar li.menu__single ul.menu__second-level {
+    position: absolute;
+    width: 100%;
+    background: #eee;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+#menubar li.menu__single:hover ul.menu__second-level {
+    top: 80px;
+    visibility: visible;
+    opacity: 1;
+}
+ 
+
 /*スマホ用メニューを表示させない*/
 #menubar-s {display: none;}
 /*３本バーアイコンを表示させない*/
@@ -267,6 +343,7 @@ body.is-fixed #contents {
 ---------------------------------------------------------------------------*/
 /*各ボックスの設定*/
 #contents .menu {
+    display: inline-block;
 	margin: 0 10px 30px;	/*上、左右、下へのボックスの外側に空けるスペース*/
 	line-height: 1.5;		/*行間をすこし狭く。デフォルトは冒頭のbody内にあります。*/
 	font-size: 30px;		/*文字サイズ*/
@@ -302,119 +379,32 @@ body.is-fixed #contents {
 	background: url(../images/bg_course.jpg) no-repeat center center / cover;
 }
 /*ボックス内の写真(背景画像)の読み込み。テイクアウト。*/
+#contents .meat {
+	background: url(../images/meat.jpg) no-repeat center center / cover;
+}
+#contents .noodles {
+	background: url(../images/ra-men.jpg) no-repeat center center / cover;
+}
 #contents .takeout {
+    width: 94.4%;
 	background: url(../images/bg_takeout.jpg) no-repeat center center / cover;
 }
 
-/*追加した*/
-
-.menu > li {
-    float: left;
-    width: 25%; /* グローバルナビ4つの場合 */
-    height: 80px;
-    line-height: 30px;
-    background: #fff;
+/*横並びの設定*/
+#item-list ul li {
+  width: 45%;
+}
+#item-list ul li:nth-child(2n-1) {
+  margin: 0 3%;
 }
 
-.menu > li a {
-    display: block;text-decoration: none;
-	padding: 10px;	/*メニュー内の余白*/
-	background: #fff;	/*背景色*/
-	font-size: 20px;		/*文字サイズ*/
-	color: #000;	/*文字色*/
-	text-align: center;
-}
+/*メニューバーの設定*/
 
-/*マウスオン時と、現在表示中(current)用の共通設定*/
-.menu li.current a {
-	background: #eee;	/*背景色*/
-}
-
-.menu > li a:hover {
-    background: #eee;
-    color: #000;
-}
-
-ul.menu__second-level {
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1;
-}
-
-ul.menu__third-level {
-    visibility: hidden;
-    opacity: 0;
-}
-
-ul.menu__fourth-level {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.menu > li:hover {
-    background: #fff;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-}
-
-.menu__second-level li {
-    border-top: 1px solid #111;
-}
-
-.menu__third-level li {
-    border-top: 1px solid #111;
-}
-
-.menu__second-level li a:hover {
-    background: #eee;
-}
-
-.menu__third-level li a:hover {
-    background: #eee;
-}
-
-.menu__fourth-level li a:hover {
-    background: #eee;
-}
- 
-.menu > li a span {
-	display: block;
-	font-size: 12px;	/*文字サイズ*/
-}
 
 
 /* floatクリア */
-.menu:before,
-.menu:after {
-    content: " ";
-    display: table;
-}
 
-.menu:after {
-    clear: both;
-}
 
-.menu {
-    *zoom: 1;
-}
-.menu > li.menu__single {
-    position: relative;
-}
-
-li.menu__single ul.menu__second-level {
-    position: flex;
-    top: 20px;
-    width: 100%;
-    background: #eee;
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
-}
-
-li.menu__single:hover ul.menu__second-level {
-    top: 80px;
-    visibility: visible;
-    opacity: 1;
-}
 
 /*footer（copyrightなどが入った最下部ブロック）
 ---------------------------------------------------------------------------*/
