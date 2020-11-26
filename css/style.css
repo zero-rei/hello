@@ -434,7 +434,11 @@ footer ul a0 {
 }
 footer ul a1 {
 	 text-decoration: none;
+<<<<<<< HEAD
     margin: 0 0 0 25px;
+=======
+    margin: 0 0 0 23px;
+>>>>>>> 17d07552f6d8ca3997355ac819b1576db6cfb196
     font-size:1.1rem ;
 }
 footer ul a2 {
@@ -444,7 +448,11 @@ footer ul a2 {
 }
 footer ul a3 {
 	 text-decoration: none;
+<<<<<<< HEAD
     margin: 0 0 0 20px;
+=======
+    margin: 0 0 0 45px;
+>>>>>>> 17d07552f6d8ca3997355ac819b1576db6cfb196
     font-size:1.1rem ;
 }
 footer ul a4 {
