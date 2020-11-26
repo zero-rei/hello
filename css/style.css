@@ -14,7 +14,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	color: #fff;
-	font-family: "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-family: "ヒラギノ丸ゴ Pro",/* "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;*/	/*フォント種類*/;
 	font-size: 16px;	/*文字サイズ*/
 	line-height: 2;		/*行間*/
 	/*background-image:url(../images/%E8%83%8C%E6%99%AF1.jpg);*/
@@ -31,9 +31,9 @@ iframe {width: 100%;}
 
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
-a {color: #fff;transition: 0.4s;}
+a {color: #fff;transition: 0.4s;text-decoration: none;}
 a:hover {color: #efd8a2;text-decoration: none;}
-
+c {font-family: "HGP行書体" ;font-size:50px; }
 /*トップページのメイン画像
 ---------------------------------------------------------------------------*/
 #mainimg {
@@ -386,6 +386,12 @@ body.is-fixed #contents {
 #contents .noodles {
 	background: url(../images/ra-men.jpg) no-repeat center center / cover;
 }
+#contents .bread {
+	background: url(../images/bread.jpg) no-repeat center center / cover;
+}
+#contents .sweets {
+	background: url(../images/sweets.jpg) no-repeat center center / cover;
+}
 #contents .takeout {
     width: 94.4%;
 	background: url(../images/bg_takeout.jpg) no-repeat center center / cover;
@@ -404,17 +410,48 @@ body.is-fixed #contents {
 
 /*footer（copyrightなどが入った最下部ブロック）
 ---------------------------------------------------------------------------*/
-footer {}
-.footer-container{padding: 20px;border-radius: 10px 10px 0 0;background:#000000;display:flex;justify-content:space-between; font-size: 13px;color: #ffffff;}
+footer {width: 1263px;
+	height: 40px;
+	margin-left: 0;
+	margin-right: 0;}
+.footer-container{padding: 0;border-radius: 10px 10px 0 0;background:#000000;}
+.footer-nav{display: flex;justify-content: space-around;}
 .footer-nav ul{margin:0;padding:0;list-style:none;font-size:0.8rem;}
 
 /*footer内のulタグ（フッターメニュー）
 ---------------------------------------------------------------------------*/
-footer ul li {
-	display: inline;
+footer ul a{
+    text-decoration: none;
 }
-footer ul a {
-	text-decoration: underline;
+footer ul b{
+    text-decoration: none;
+    font-size:2.0rem ;
+}
+footer ul a0 {
+	 text-decoration: none;
+    margin: 0 0 0 25px;
+    font-size:1.1rem ;
+}
+footer ul a1 {
+	 text-decoration: none;
+    margin: 0 0 0 23px;
+    font-size:1.1rem ;
+}
+footer ul a2 {
+	 text-decoration: none;
+    margin: 0 0 0 100px;
+    font-size:1.1rem ;
+}
+footer ul a3 {
+	 text-decoration: none;
+    margin: 0 0 0 45px;
+    font-size:1.1rem ;
+}
+footer ul a4 {
+	 text-decoration: none;
+    margin: 0 0 0 20px;
+    font-size:1.1rem ;
+    display: inline-block;
 }
 
 /*「更新情報・お知らせ」ブロック
@@ -680,9 +717,12 @@ header {
 	height: auto;
 	background: #000;	/*背景色*/
 	padding: 10px 3%;	/*上下、左右への余白*/
+    text-decoration: none;
+    
 }
 /*ロゴ画像*/
 header #logo img {
+    text-decoration:none;
 	position: static;
 	width: 220px;	/*画像の幅*/
 	margin-bottom: 10px;	/*下に空ける余白*/
