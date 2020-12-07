@@ -102,35 +102,38 @@ return false;
 </div>
 <!--/#contents-->
 
-<footer>
-<div class="footer-container">
-    <div class="footer-nav">
-      <ul> 
-          <li><a href="index.html"><b>HOME</b></a></li>
-          <li><a href="index.html"><a0>ホーム</a0></a></li>
-      </ul>
-      <ul>
-        <li><a href="menu.html"><b>MENU</b></a></li>
-        <li><a href="menu.html"><a1>メニュー</a1></a></li>
-        <li><a href="takeout.html"><a1>肉類</a1></a></li>
-        <li><a href="takeout.html"><a1>魚類</a1></a></li>
-        <li><a href="takeout.html"><a1>米類</a1></a></li>
-        <li><a href="takeout.html"><a1>麺類</a1></a></li>
-        <li><a href="takeout.html"><a1>パン類</a1></a></li>
-        <li><a href="takeout.html"><a1>スイーツ類</a1></a></li>
-      </ul>
-        <ul>
-            <li><a href="access.html"><b>RECOMMENDED</b></a></li>
-            <li><a href="access.html"><a2>おすすめ</a2></a></li>
-　　     </ul>
-        <ul>
-            <li><a href="contact.html"><b>CONTACT</b></a></li>
-            <li><a href="contact.html"><a3>お問合せ</a3></a></li>
-        </ul>
 
+    <footer>
+    <div class="footer-container">
+        <div class="footer-nav">
+          <ul> 
+              <li><a href="index.html"><b>HOME</b></a></li>
+              <li><a href="index.html"><a0>ホーム</a0></a></li>
+          </ul>
+          <ul>
+            <li><a href="menu.html"><b>MENU</b></a></li>
+            <li><a href="menu.html"><a0>メニュー</a0></a></li>
+            <li><a href="takeout.html"><a1>肉類</a1></a></li>
+            <li><a href="takeout.html"><a1>魚類</a1></a></li>
+            <li><a href="takeout.html"><a1>米類</a1></a></li>
+            <li><a href="takeout.html"><a1>麺類</a1></a></li>
+            <li><a href="takeout.html"><a1>パン類</a1></a></li>
+            <li><a href="takeout.html"><a1>スイーツ類</a1></a></li>
+          </ul>
+            <ul>
+                <li><a href="access.html"><b>RECOMMENDED</b></a></li>
+                <li><a href="access.html"><a2>おすすめ</a2></a></li>
+           </ul>
+            <ul>
+                <li><a href="contact.html"><b>CONTACT</b></a></li>
+                
+                <li><a href="contact.html"><a3>お問合せ</a3></a></li>
+            </ul>
+
+        </div>
     </div>
-</div>
- </footer>
+    </footer>
+
 <!--<small>Copyright&copy; <a href="index.html">Sample Cafe</a> All Rights Reserved.</small>
 <span class="pr">《Web Design:Template-Party》</span>--!>
 
@@ -163,7 +166,7 @@ pola = new Vivus('polaroid', {type: 'scenario-sync', duration: 20});
 <!--メニューの開閉処理条件設定　800px以下-->
 <script>
 if (OCwindowWidth() <= 800) {
-	open_close("menubar_hdr", "menubar-s");
+	open_close("menubar_hdr", "menubar-s","footer-s","footer-container-s","footer-nav-s");
 }
 </script>
 

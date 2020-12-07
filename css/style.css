@@ -345,7 +345,7 @@ body.is-fixed #contents {
 /*各ボックスの設定*/
 #contents .menu {
     display: inline-block;
-	margin: 0 10px 30px;	/*上、左右、下へのボックスの外側に空けるスペース*/
+	margin: 0 0 15px;	/*上、左右、下へのボックスの外側に空けるスペース*/
 	line-height: 1.5;		/*行間をすこし狭く。デフォルトは冒頭のbody内にあります。*/
 	font-size: 30px;		/*文字サイズ*/
 	text-shadow: 1px 1px #000;	/*テキストの影。右に、下に、色。*/
@@ -410,12 +410,12 @@ body.is-fixed #contents {
 
 /*footer（copyrightなどが入った最下部ブロック）
 ---------------------------------------------------------------------------*/
-footer {width: 1263px;
+footer { width: 100%;
 	height: 40px;
 	margin-left: 0;
 	margin-right: 0;}
 .footer-container{padding: 0;border-radius: 10px 10px 0 0;background:#000000;}
-.footer-nav{display: flex;justify-content: space-around;}
+.footer-nav{display:flex;justify-content: space-around;}
 .footer-nav ul{margin:0;padding:0;list-style:none;font-size:0.8rem;}
 
 /*footer内のulタグ（フッターメニュー）
@@ -452,7 +452,9 @@ footer ul a4 {
     margin: 0 0 0 20px;
     font-size:1.1rem ;
     display: inline-block;
+    position: fixed;
 }
+
 
 /*「更新情報・お知らせ」ブロック
 ---------------------------------------------------------------------------*/
@@ -718,7 +720,6 @@ header {
 	background: #000;	/*背景色*/
 	padding: 10px 3%;	/*上下、左右への余白*/
     text-decoration: none;
-    
 }
 /*ロゴ画像*/
 header #logo img {
@@ -766,6 +767,53 @@ ul.icon {
 }
 /*PC用メニューを非表示にする*/
 #menubar {display: none;}
+    
+/*footer（copyrightなどが入った最下部ブロック）
+---------------------------------------------------------------------------*/
+footer { width: 100%;
+	height: 40px;
+	margin-left: 0;
+	margin-right: 0;}
+.footer-container{padding: 0;border-radius: 10px 10px 0 0;background:#000000;}
+.footer-nav{display:flex;justify-content: space-around;}
+.footer-nav ul{margin:0;padding:0;list-style:none;font-size:0.8rem;}
+
+/*footer内のulタグ（フッターメニュー）
+---------------------------------------------------------------------------*/
+footer ul a{
+    text-decoration: none;
+}
+footer ul b{
+    text-decoration: none;
+    font-size:0.5rem ;
+}
+footer ul a0 {
+    text-decoration: none;
+    margin: 0 0 0 3px;
+    font-size:0.5rem ;
+}
+    
+footer ul a1 {
+	display: none;
+}
+footer ul a2 {
+	 text-decoration: none;
+    margin: 0 0 0 15px;
+    font-size:0.5rem ;
+}
+footer ul a3 {
+    text-decoration: none;
+    margin: 0 0 0 10px;
+    font-size:0.5rem ;
+}
+footer ul a4 {
+	 text-decoration: none;
+    margin: 0 0 0 15px;
+    font-size:0.5rem ;
+    display: inline-block;
+    position: fixed;
+}
+
 
 /*３本バーアイコン設定
 ---------------------------------------------------------------------------*/
@@ -790,6 +838,8 @@ ul.icon {
 	background: url(../images/icon_menu.png) no-repeat center bottom/50px;	/*アイコンの読み込み、上半分(bottom)を表示、幅50px*/
 }
 
+
+
 /*fixmenu。メインメニューが画面上部に到達した際の設定
 ---------------------------------------------------------------------------*/
 body.is-fixed-menu #contents {
@@ -810,6 +860,8 @@ body.is-fixed-menu #contents {
 .pc {display:none;}
 
 }
+
+
 
 
 

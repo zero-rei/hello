@@ -43,3 +43,18 @@ fm_addEvent(window, 'load', function() {
   	}
   });
 });
+
+fm_addEvent(window, 'load', function() {
+	var offsettop;
+	offsettop = document.getElementById('footer').offsetTop;
+	if (!offsettop) {
+		offsettop = document.getElementById('footer-s').offsetTop;
+	}
+	fm_addEvent(window, 'scroll', function() {
+  	if (offsettop < Math.max(document.body.scrollTop,document.documentElement.scrollTop)) {
+  		fm_addClass(document.body, 'is-fixed-menu');
+    } else {
+    	fm_removeClass(document.body, 'is-fixed-menu');
+  	}
+  });
+});
