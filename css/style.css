@@ -410,44 +410,46 @@ body.is-fixed #contents {
 
 /*footer（copyrightなどが入った最下部ブロック）
 ---------------------------------------------------------------------------*/
-footer { width: 100%;
+#footer { width: 100%;
 	height: 40px;
 	margin-left: 0;
-	margin-right: 0;}
-.footer-container{padding: 0;border-radius: 10px 10px 0 0;background:#000000;}
-.footer-nav{display:flex;justify-content: space-around;}
-.footer-nav ul{margin:0;padding:0;list-style:none;font-size:0.8rem;}
+	margin-right: 0;
+    background:#000000;
+    }
+ .footer-container{padding: 20px;border-radius: 10px 10px 0 0;background:#000000;}
+ .footer-nav{display:flex;justify-content: space-around;}
+ .footer-nav ul{margin:0;padding:0;list-style:none;font-size:0.8rem;}
 
 /*footer内のulタグ（フッターメニュー）
 ---------------------------------------------------------------------------*/
-footer ul a{
+#footer ul a{
     text-decoration: none;
 }
-footer ul b{
+#footer ul b{
     text-decoration: none;
     font-size:2.0rem ;
 }
-footer ul a0 {
+#footer ul a0 {
 	 text-decoration: none;
     margin: 0 0 0 25px;
     font-size:1.1rem ;
 }
-footer ul a1 {
+#footer ul a1 {
 	 text-decoration: none;
     margin: 0 0 0 25px;
     font-size: 1.1rem;
 }
-footer ul a2 {
+#footer ul a2 {
 	 text-decoration: none;
     margin: 0 0 0 100px;
     font-size:1.1rem ;
 }
-footer ul a3 {
+#footer ul a3 {
     text-decoration: none;
     margin: 0 0 0 45px;
     font-size:1.1rem ;
 }
-footer ul a4 {
+#footer ul a4 {
 	 text-decoration: none;
     margin: 0 0 0 20px;
     font-size:1.1rem ;
@@ -455,6 +457,13 @@ footer ul a4 {
     position: fixed;
 }
 
+#footer .copyright {
+    font-size: 10px;
+    text-align: center;
+    background: #000000;
+}
+
+#footer02{display: none;}
 
 /*「更新情報・お知らせ」ブロック
 ---------------------------------------------------------------------------*/
@@ -768,52 +777,79 @@ ul.icon {
 /*PC用メニューを非表示にする*/
 #menubar {display: none;}
     
-/*footer（copyrightなどが入った最下部ブロック）
+/*スマホ用のfooterの設定
 ---------------------------------------------------------------------------*/
-footer { width: 100%;
-	height: 40px;
-	margin-left: 0;
-	margin-right: 0;}
-.footer-container{padding: 0;border-radius: 10px 10px 0 0;background:#000000;}
-.footer-nav{display:flex;justify-content: space-around;}
-.footer-nav ul{margin:0;padding:0;list-style:none;font-size:0.8rem;}
+#footer02 {
+    padding: 0 0 0;
+    display:block;
+    background: #000000;
+}
 
-/*footer内のulタグ（フッターメニュー）
----------------------------------------------------------------------------*/
-footer ul a{
+.ie #footer02 .logo img,
+  #footer02 .logo {
+    display: block;
+   margin: 0 0 10px;
+}
+
+#footer02 .logo .ja {
+    font-size: 12px;
+}
+    
+#footer02 ul a{
     text-decoration: none;
 }
-footer ul b{
+#footer02 ul b{
     text-decoration: none;
-    font-size:0.5rem ;
-}
-footer ul a0 {
-    text-decoration: none;
-    margin: 0 0 0 3px;
     font-size:0.5rem ;
 }
     
-footer ul a1 {
-	display: none;
-}
-footer ul a2 {
-	 text-decoration: none;
-    margin: 0 0 0 15px;
-    font-size:0.5rem ;
-}
-footer ul a3 {
-    text-decoration: none;
-    margin: 0 0 0 10px;
-    font-size:0.5rem ;
-}
-footer ul a4 {
-	 text-decoration: none;
-    margin: 0 0 0 15px;
-    font-size:0.5rem ;
-    display: inline-block;
-    position: fixed;
+#footer02 ul a1 {
+	text-decoration: none;
+    padding: 10px;
+    font-size:1.0rem ;
 }
 
+#footer02 .inner-block {
+ padding: 20px 10px 0;
+ background:#000000;
+}
+
+    
+#footer02 .nav {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+}
+#footer02 .nav li {
+    border: 1px solid #555;
+}
+#footer02 .nav li b {
+    display: block;
+    padding: 20px 20px;
+    background-size: 6px auto;
+}
+#footer02 .js-aco li b {
+    padding-left: 40px;
+}
+#footer02 .nav-child{
+    display: none;
+    font-size: 10px ;
+}
+
+#footer02 .copyright {
+    font-size: 10px;
+    text-align: center;
+}
+    
+#footer02 .copyright {
+    margin: 5px 0 0 20px;
+    font-size: 10px;
+    text-align: center;
+    background: #000000;
+}
+    
+#footer{
+   display: none;
+}
 
 /*３本バーアイコン設定
 ---------------------------------------------------------------------------*/

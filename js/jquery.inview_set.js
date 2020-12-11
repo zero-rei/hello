@@ -22,3 +22,10 @@ $('.transform1').on('inview', function() {
 $('.transform2').on('inview', function() {
 	$(this).addClass('transform2style');
 });
+
+/* アコーディオンメニュー
+  ------------------------------*/
+  $('.nav .js-aco').click(function () {
+    $(this).next().stop().slideToggle();
+    $(this).toggleClass('is-active');
+  });
