@@ -33,6 +33,7 @@ iframe {width: 100%;}
 ---------------------------------------------------------------------------*/
 a {color: #fff;transition: 0.4s;text-decoration: none;}
 a:hover {color: #efd8a2;text-decoration: none;}
+a1:hover{color: #efd8a2;}
 c {font-family: "ヒラギノ丸ゴ　Pro" ;font-size:50px; }
 /*トップページのメイン画像
 ---------------------------------------------------------------------------*/
@@ -80,7 +81,7 @@ video {
 #arrow1 {
 	position: absolute;z-index: 1;
 	left: 47.5%;
-	bottom: 50px;	/*下からの配置場所指定*/
+	bottom:-100px;	/*下からの配置場所指定*/
 	width: 5%;		/*幅*/
 }
 
@@ -239,10 +240,10 @@ ul.icon img {
 /*fixmenu設定（メニューが画面上部に到達した際のスタイル）
 ---------------------------------------------------------------------------*/
 /*上部固定メニュー用fixmenu設定*/
-body.is-fixed-menu #menubar.nav-fix-pos {
+/*body.is-fixed-menu #menubar.nav-fix-pos {
 	position: fixed;width: 100%;top: 0px;left: 0;
 	border-bottom: 1px solid #ccc;	/*下線を追加する*/
-}
+}*/
 body.is-fixed-menu #contents {
 	margin-top: 85px;	/*「menubar li a」の「height」と「padding-top」を合計した数字にする。数行下の「body.is-fixed #menubar.nav-fix-pos」も同じサイズに。*/
 }
@@ -410,61 +411,81 @@ body.is-fixed #contents {
 
 /*footer（copyrightなどが入った最下部ブロック）
 ---------------------------------------------------------------------------*/
-#footer { width: 100%;
-	height: 40px;
-	margin-left: 0;
-	margin-right: 0;
-    background:#000000;
-    }
- .footer-container{padding: 20px;border-radius: 10px 10px 0 0;background:#000000;}
- .footer-nav{display:flex;justify-content: space-around;}
- .footer-nav ul{margin:0;padding:0;list-style:none;font-size:0.8rem;}
+#footer02 {
+    padding: 0 0 0;
+    display:block;
+    background: #000000;
+}
 
-/*footer内のulタグ（フッターメニュー）
----------------------------------------------------------------------------*/
-#footer ul a{
+.ie #footer02 .logo img,
+  #footer02 .logo {
+    display: block;
+   margin: 0 0 10px;
+}
+
+#footer02 .logo .ja {
+    font-size: 12px;
+}
+    
+#footer02 ul a{
     text-decoration: none;
 }
-#footer ul b{
+#footer02 ul b{
     text-decoration: none;
-    font-size:2.0rem ;
+    font-size:0.5rem ;
 }
-#footer ul a0 {
-	 text-decoration: none;
-    margin: 0 0 0 25px;
-    font-size:1.1rem ;
-}
-#footer ul a1 {
-	 text-decoration: none;
-    margin: 0 0 0 25px;
-    font-size: 1.1rem;
-}
-#footer ul a2 {
-	 text-decoration: none;
-    margin: 0 0 0 100px;
-    font-size:1.1rem ;
-}
-#footer ul a3 {
-    text-decoration: none;
-    margin: 0 0 0 45px;
-    font-size:1.1rem ;
-}
-#footer ul a4 {
-	 text-decoration: none;
+    
+#footer02 ul a1 {
+	text-decoration: none;
+    padding: 10px;
+    font-size:1.0rem ;
     margin: 0 0 0 20px;
-    font-size:1.1rem ;
-    display: inline-block;
-    position: fixed;
 }
 
-#footer .copyright {
+#footer02 .inner-block {
+ padding: 20px 10px 0 0;
+ background:#000000;
+}
+
+    
+#footer02 .nav {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+}
+#footer02 .nav li {
+    border-top: 1px solid #555;
+}
+#footer02 .nav li b{
+    border-bottom: 1px solid #555;
+}
+#footer02 .nav li b {
+    display: block;
+    padding: 20px 20px;
+    background-size: 6px auto;
+}
+#footer02 .js-aco li b {
+    padding-left: 40px;
+}
+#footer02 .nav-child{
+    display: none;
+    font-size: 10px ;
+}
+
+#footer02 .copyright {
+    font-size: 10px;
+    text-align: center;
+}
+    
+#footer02 .copyright {
+    margin: 5px 0 0 20px;
     font-size: 10px;
     text-align: center;
     background: #000000;
 }
-
-#footer02{display: none;}
-
+    
+#footer{
+   display: none;
+}
 /*「更新情報・お知らせ」ブロック
 ---------------------------------------------------------------------------*/
 /*ブロック全体の指定*/
@@ -819,9 +840,9 @@ ul.icon {
     width: calc(100% + 20px);
     margin-left: -10px;
 }
-#footer02 .nav li {
+/*#footer02 .nav li {
     border: 1px solid #555;
-}
+}*/
 #footer02 .nav li b {
     display: block;
     padding: 20px 20px;
